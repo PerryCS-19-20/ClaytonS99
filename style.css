@@ -3,13 +3,17 @@ body {
     background-image: url("jungle-forest.jpg");
     
 }
-.Blackback{
-    background-color: black;
+.Opaque{
+ background-color: black; 
+ opacity: .75;
+     
+
 }
 h1 {
     text-align: center;
     color: white;
     background-color: black;
+    
 }
 h3 {
    text-align: center;
@@ -27,5 +31,6 @@ h2 {
    text-align: center;
    color: white; 
    background-color: black;
+}
 
 
