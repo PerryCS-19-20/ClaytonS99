@@ -18,23 +18,57 @@ and open the template in the editor.
                 
             }
         </style>
+        <script>
+            var player = "X"
+            function play(cellid) {
+                var move = document.getElementById(cellid);
+               if(move.textContent==""){
+                move.textContent=player;
+                if(move.textContent=="X"){
+                    player = "O";
+                }
+                if(move.textContent=="O"){
+                    player = "X";
+                }
+                
+                
+                
+            }
+            }
+            function check3cells(c1id, c2id, c3id){
+                var c1 = document.getElementById(c1id);
+                var c2 = document.getElementById(c2id);
+                var c3 = document.getElementById(c3id);
+                if((c1.textContent == c2.textContent)&&
+                    (c2.textConent == c3.textContent)&&
+                    (c1.textContent!= "")){
+                win=true;
+                    }
+            }
+            function checkWin(){
+                check3cells("1","2","3");
+            }
+            
+               
+    
+        </script>
     </head>
     <body>
         <table align="center">
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td id="1" onclick="play('1');"></td>
+                <td id="2" onclick="play('2');"></td>
+                <td id="3" onclick="play('3');"></td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td id="4" onclick="play('4');"></td>
+                <td id="5" onclick="play('5');"></td>
+                <td id="6" onclick="play('6');"></td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td id="7" onclick="play('7');"></td>
+                <td id="8" onclick="play('8');"></td>
+                <td id="9" onclick="play('9');"></td>
             </tr>
         </table>
        
