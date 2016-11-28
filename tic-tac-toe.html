@@ -27,7 +27,7 @@ and open the template in the editor.
                 var c2 = document.getElementById(c2id);
                 var c3 = document.getElementById(c3id);
                 if((c1.textContent == c2.textContent)&&
-                    (c2.textConent == c3.textContent)&&
+                    (c2.textContent == c3.textContent)&&
                     (c1.textContent!= "")){
                         win = true;
                         
@@ -54,7 +54,7 @@ and open the template in the editor.
                 var move = document.getElementById(cellid);
                if(move.textContent==""){
                 move.textContent=player;
-                
+                checkWin();
                     
                 
                 if(move.textContent=="X"){
