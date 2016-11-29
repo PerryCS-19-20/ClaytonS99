@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>To Do List</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <textarea rows="5" cols="80" id="inputText">Make List Here</textarea>
+        <button onclick="testHTML();">Add list</button>
+        <ol id="stuff">
+            
+        </ol>
+        
+		<script>
+			function testHTML() {
+                            var thingy = document.getElementById("stuff");
+                            var textInput = document.getElementById("inputText");
+                            
+        for(var i=0; i<100; i++){
+        var list = document.createElement("li");
+                            list.textContent= "I will not "+ textInput.value ;
+                            thingy.appendChild(list);
+        }
+                              
+                        }
+		</script>
+    </body>
+</html>

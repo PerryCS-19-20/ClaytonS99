@@ -1,0 +1,30 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>To Do List</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <textarea rows="5" cols="80" id="inputText">Make List Here</textarea>
+        <button onclick="testHTML();">Add list</button>
+        <ul id="stuff">
+            
+        </ul>
+        
+		<script>
+			function testHTML() {
+                            var thingy = document.getElementById("stuff");
+                            var textInput = document.getElementById("inputText");
+                            var list = document.createElement("li");
+                            list.textContent=textInput.value ;
+                            thingy.appendChild(list);
+                              
+                        }
+		</script>
+    </body>
+</html>
