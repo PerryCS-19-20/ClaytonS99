@@ -16,16 +16,31 @@
     <body onload="buildTimesTable()">
         <script>
             function buildTimesTable() {
-                // Create a table for the multiplication table
+                
                 var timesTable = document.createElement("table");
                 timesTable.id = "timesTable";
                 
-                // Add the table to the document's body
+                
                 var body = document.body;
                 body.appendChild(timesTable);
                 
-                // Fill in the multiplication table
+                 for(var i = 0;  i < 11; i++){     
+                    var row = document.createElement("tr")
+                    timesTable.appendChild(row);
+                    for(var x = 0; x < 11; x++){
+                    var cell = document.createElement("td")
+                    timesTable.appendChild(cell);
             }
+            for(var y = 0; y < 11; y++){
+                var headerTop = document.createElement("th")
+                timesTable.appendChild(headerTop);
+                
+            }
+                 }
+            }
+            
+            
         </script>
+        
     </body>
 </html>
