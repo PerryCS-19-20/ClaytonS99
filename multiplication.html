@@ -3,10 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <title>Times Table</title>
         <style>
             table, td, th {
                 border: solid 1px;
+                background-color: white;
             }
             td {
                 text-align: right;
@@ -15,32 +17,50 @@
     </head>
     <body onload="buildTimesTable()">
         <script>
-            function buildTimesTable() {
-                
-                var timesTable = document.createElement("table");
-                timesTable.id = "timesTable";
-                
-                
-                var body = document.body;
-                body.appendChild(timesTable);
-                
-                 for(var i = 0;  i < 11; i++){     
-                    var row = document.createElement("tr")
-                    timesTable.appendChild(row);
-                    for(var x = 0; x < 11; x++){
-                    var cell = document.createElement("td")
-                    timesTable.appendChild(cell);
+        function buildTimesTable() {
+
+            var timesTable = document.createElement("table");
+            timesTable.id = "timesTable";
+
+            var z = 0;
+            var body = document.body;
+            body.appendChild(timesTable);
+
+            for (var i = 0; i < 11; i++) {
+                var row = document.createElement("tr")
+                timesTable.appendChild(row);
+                for (var x = 0; x < 11; x++) {
+                    if (i == 0) {
+                        var cell = document.createElement("th")
+                        timesTable.appendChild(cell);
+                        cell.textContent = x;
+                        if (x == 0) {
+                            cell.textContent = "";
+                        }
+
+                    } else {
+                        var cell = document.createElement("td")
+                        timesTable.appendChild(cell);
+                        cell.textContent = (x) * i;
+                        if (x == 0) {
+                            var z = z + 1;
+                            cell.textContent = x + z;
+
+                        }
+                        if (i % 3 == 0) {
+                            cell.style.backgroundColor = "red";
+                        }
+                        if (x % 3 == 0) {
+                            cell.style.backgroundColor = "red";
+                        }
+                    }
+                }
+
             }
-            for(var y = 0; y < 11; y++){
-                var headerTop = document.createElement("th")
-                timesTable.appendChild(headerTop);
-                
-            }
-                 }
-            }
-            
-            
+        }
+
+
         </script>
-        
+        <h1><a href="index.html">HOME</a></h1>
     </body>
 </html>
