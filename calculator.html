@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <title>Triangle Calc</title>
+        <title>Pythagorean's Theorem</title>
+        
         <script>
             function calc() {
                 var a = parseFloat(document.getElementById("alength").value);
@@ -14,7 +15,7 @@
                 var add = Math.pow(a, 2);
                 var additive = Math.pow(b, 2); // Calculate area of bottom circle
                 var addition = add + additive;
-                vol.value = Math.pow(addition, 1 / 2);  // Show volume of cylinder to 2 decimal places
+                clength.value = Math.pow(addition, 1 / 2);  // Show volume of cylinder to 2 decimal places
             }
         </script>
         <style>
@@ -25,7 +26,7 @@
     </head>
     <body>
         <h1>Length of C:</h1>
-        <img src="http://images.tutorvista.com/cms/images/67/right-cylinder.png" style="float: left; height: 150px; margin-right: 5px;">
+        <img src="PythagoreanTheoremFigure_1000.gif" style="float: left; height: 150px; margin-right: 5px;">
         <h2>a<sup>2</sup>+ b<sup>2</sup> = c <sup>2</sup></h2>
 
         A: <input type="number" id="alength" placeholder="A length"><br>
