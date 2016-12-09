@@ -4,5 +4,6 @@ function buildMap(x){
     body.appendChild(createList);
     
     var list1 = document.createElement("li");
+    createList
     
 }

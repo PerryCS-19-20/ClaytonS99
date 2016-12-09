@@ -16,35 +16,65 @@
         </style>
     </head>
     <body onload="buildTimesTable();">
-        
+
 
         <h1>Multiplication Table</h1>
         Table Width:<input type="range" id="tableWidth" min="1" max="20" value="10" onchange ="buildTimesTable();"><br>
-
+         Table Height:<input type="range" id="tableHeight" min="1" max="20" value="10" onchange ="buildTimesTable();"><br>
 
         <script>
-            function buildTimesTable() {
-                // Remove the multiplication table if it already exists.
-                var timesTable = document.getElementById("timesTable");
-                if (timesTable != null) {
-                    timesTable.parentNode.removeChild(timesTable);        
+        function buildTimesTable() {
+            // Remove the multiplication table if it already exists.
+            var timesTable = document.getElementById("timesTable");
+            if (timesTable != null) {
+                timesTable.parentNode.removeChild(timesTable);
+            }
+
+
+            // Create a table for the multiplication table
+            timesTable = document.createElement("table");
+            timesTable.id = "timesTable";
+
+            // Add the table to the document's body
+            var body = document.body;
+            body.appendChild(timesTable);
+            var height = document.getElementById("tableHeight").value;
+            // Get the table width and height
+            var width = document.getElementById("tableWidth").value;
+            var z = 0;
+            for (var i = 0; i < height; i++) {
+                var row = document.createElement("tr")
+                timesTable.appendChild(row);
+                for (var x = 0; x < width; x++) {
+                    if (i == 0) {
+                        var cell = document.createElement("th")
+                        timesTable.appendChild(cell);
+                        cell.textContent = x;
+                        if (x == 0) {
+                            cell.textContent = "";
+                        }
+
+                    } else {
+                        var cell = document.createElement("td")
+                        timesTable.appendChild(cell);
+                        cell.textContent = (x) * i;
+                        if (x == 0) {
+                            var z = z + 1;
+                            cell.textContent = x + z;
+
+                        }
+                        if (i % 3 == 0) {
+                            cell.style.backgroundColor = "red";
+                        }
+                        if (x % 3 == 0) {
+                            cell.style.backgroundColor = "red";
+                        }
+                    }
                 }
 
-
-                // Create a table for the multiplication table
-                timesTable = document.createElement("table");
-                timesTable.id = "timesTable";            
-                
-                // Add the table to the document's body
-                var body = document.body;
-                body.appendChild(timesTable);
-                
-                // Get the table width and height
-                var width = document.getElementById("tableWidth").value;
-
-
-                // Fill in the multiplication table
             }
+            // Fill in the multiplication table
+        }
         </script>
         <h1><a href="index.html">HOME</a></h1>
     </body>
