@@ -25,8 +25,4 @@ function buildMap(x){
     var createlist2 = document.createElement("ul");
     createList.appendChild(createList2);
     
-    nextFunction();
-}
-function nextFunction(){
-    
 }
