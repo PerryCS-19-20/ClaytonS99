@@ -42,7 +42,7 @@ function buildMap(x) {
     createlist2.appendChild(list6);
     var a5 = document.createElement("a")
     a5.textContent = "Chalkboard";
-    a5.href = "chalboard.html";
+    a5.href = "chalkboard.html";
     list6.appendChild(a5);
     var list7 = document.createElement("li");
     createlist2.appendChild(list7);
