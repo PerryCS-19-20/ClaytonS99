@@ -4,6 +4,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="sitemap.css">  
+   <script src="sitemap.js"></script>
+
+
+
+   
+    
+   
         <title>Times Table</title>
         <style>
             table, td, th {
@@ -15,7 +23,9 @@
             }
         </style>
     </head>
-    <body onload="buildTimesTable()">
+     
+    <body onload="buildMap('menubar'); buildTimesTable();  ">
+        <div id="menubar"></div>
         <script>
         function buildTimesTable() {
 
@@ -61,6 +71,6 @@
 
 
         </script>
-        <h1><a href="index.html">HOME</a></h1>
+        
     </body>
 </html>

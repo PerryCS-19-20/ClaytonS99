@@ -6,4 +6,23 @@ body {
 img{
     background-color: white;
 }
+h1{
+    text-align: center;
+   color: white; 
+   background-color: black;
+   padding: 0 px;
+   width: auto;
+   margin-left: auto;
+   margin-right: auto; 
+}
+h2{
+   
+   color: white; 
+   background-color: black;
+   padding: 0 px;
+   width: auto;
+   margin-left: auto;
+   margin-right: auto; 
+}
+
 
